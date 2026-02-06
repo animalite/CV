@@ -1,0 +1,56 @@
+# Dependencies
+node_modules
+.pnpm-store
+package-lock.json
+yarn.lock
+
+# Build output
+dist
+build
+out
+.next
+
+# Git
+.git
+.gitignore
+.gitattributes
+.github
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-*
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Test and coverage
+coverage
+.nyc_output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Documentation
+README.md
+*.md
+docs
+CHANGELOG.md
+
+# Misc
+*.cache
+.temp
+tmp
+temp
+.cache
+.history

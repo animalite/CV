@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dev-cv
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    labels:
+      - "com.example.description=CV React Application"
+      - "com.example.department=Frontend"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f localhost || exit 1"]
+      interval: "5s"
+      timeout: "5s"
+      retries: 5
+      start_period: "5s"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

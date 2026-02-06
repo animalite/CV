@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# ==============================================================================
+# Git Post-Receive Hook for Automated Deployment
+# ==============================================================================
+# This hook triggers automatically when code is pushed to the repository
+# It checks which branch was pushed and runs deployment if needed
+# ==============================================================================
+
+# Configuration
+DEPLOYMENT_BRANCH="main"
+PROJECT_DIR="/path/to/your/cv"  # Update this path!
+DEPLOYMENT_SCRIPT="${PROJECT_DIR}/deploy.sh"
+LOG_FILE="/var/log/cv-deployment.log"
+
+# Ensure we're in a git repo
+if [ ! -d ".git" ]; then
+    echo "Error: Not a git repository"
+    exit 1
+fi
+
+# Log function
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
+}
+
+log "============================================================"
+log "Post-receive hook triggered"
+log "============================================================"
+
+# Read stdin (format: oldrev newrev refname)
+while read oldrev newrev refname; do
+    branch=$(git rev-parse --symbolic --abbrev-ref "$refname")
+    
+    log "Received push to branch: $branch"
+    log "Old revision: $oldrev"
+    log "New revision: $newrev"
+    
+    # Check if this is the deployment branch
+    if [ "$branch" = "$DEPLOYMENT_BRANCH" ]; then
+        log "Push to main branch detected, starting deployment..."
+        
+        # Change to project directory
+        if [ -d "$PROJECT_DIR" ]; then
+            cd "$PROJECT_DIR" || {
+                log "Error: Cannot change to project directory $PROJECT_DIR"
+                exit 1
+            }
+            
+            # Run deployment script
+            if [ -f "$DEPLOYMENT_SCRIPT" ]; then
+                log "Running deployment script..."
+                bash "$DEPLOYMENT_SCRIPT" || {
+                    log "Error: Deployment script failed"
+                    exit 1
+                }
+                
+                log "============================================================"
+                log "Deployment completed successfully!"
+                log "============================================================"
+            else
+                log "Error: Deployment script not found at $DEPLOYMENT_SCRIPT"
+                exit 1
+            fi
+        else
+            log "Error: Project directory not found at $PROJECT_DIR"
+            exit 1
+        fi
+    else
+        log "Branch $branch is not a deployment branch, skipping deployment"
+    fi
+done
+
+exit 0

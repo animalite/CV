@@ -1,0 +1,281 @@
+[
+    {
+        "Id": "9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb",
+        "Created": "2026-02-06T09:49:39.486116867Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 13945,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-02-06T09:49:39.769024671Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "unhealthy",
+                "FailingStreak": 81,
+                "Log": [
+                    {
+                        "Start": "2026-02-06T10:36:39.159132128Z",
+                        "End": "2026-02-06T10:36:39.274346067Z",
+                        "ExitCode": 1,
+                        "Output": "wget: can't connect to remote host: Connection refused\n"
+                    },
+                    {
+                        "Start": "2026-02-06T10:37:09.277135571Z",
+                        "End": "2026-02-06T10:37:09.448686025Z",
+                        "ExitCode": 1,
+                        "Output": "wget: can't connect to remote host: Connection refused\n"
+                    },
+                    {
+                        "Start": "2026-02-06T10:37:39.44735559Z",
+                        "End": "2026-02-06T10:37:39.775983449Z",
+                        "ExitCode": 1,
+                        "Output": "wget: can't connect to remote host: Connection refused\n"
+                    },
+                    {
+                        "Start": "2026-02-06T10:38:09.782457732Z",
+                        "End": "2026-02-06T10:38:10.003804588Z",
+                        "ExitCode": 1,
+                        "Output": "wget: can't connect to remote host: Connection refused\n"
+                    },
+                    {
+                        "Start": "2026-02-06T10:38:39.998672709Z",
+                        "End": "2026-02-06T10:38:40.1725275Z",
+                        "ExitCode": 1,
+                        "Output": "wget: can't connect to remote host: Connection refused\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:b00c900da5dd8bf376cf056edcfa7e50375a19d63553b8022bfdebf48812ff01",
+        "ResolvConfPath": "/var/lib/docker/containers/9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb/hostname",
+        "HostsPath": "/var/lib/docker/containers/9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb/hosts",
+        "LogPath": "/var/lib/docker/containers/9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb/9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb-json.log",
+        "Name": "/dev-cv",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "3",
+                    "max-size": "10m"
+                }
+            },
+            "NetworkMode": "proxy",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 536870912,
+            "NanoCpus": 500000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 268435456,
+            "MemorySwap": 1073741824,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "9384aa77f9324c51431a57a60ad5749fbdad317cbabbbe582b33cb6e4279badb",
+                "LowerDir": "/var/lib/docker/overlay2/0602bd2c12ff46995ec50eda3586363e3f86f038ff7d72b3acfa95c438217fa7-init/diff:/var/lib/docker/overlay2/iywwxmf1zy4rgcme91lony1fn/diff:/var/lib/docker/overlay2/n8x77rnw5cd6j13naf92cf3ox/diff:/var/lib/docker/overlay2/ycg0wiy1rnsvc73evvnzlb1lk/diff:/var/lib/docker/overlay2/vs2ueylgfdyzrf2f33xaynvhg/diff:/var/lib/docker/overlay2/ea74109a9291768f7cd5ff39d29e72c7337819889b549f7e100c77bc633b873c/diff:/var/lib/docker/overlay2/4a4638e725fb6e252ac00a28095470728f8babd7a125e8422e459d4b684d6e60/diff:/var/lib/docker/overlay2/633ddfe3c0aac6f9a2528593ea8ca9cb915337d8833a8b7fddf88543dc2e3efe/diff:/var/lib/docker/overlay2/6186fc10a9547cc0a3c55eb0d79700a97c1522786d01eae7fd4ea33f56f66495/diff:/var/lib/docker/overlay2/e932a032d484ac13308d254ae7a4c66e6e0fc82356970326006138f2234352c0/diff:/var/lib/docker/overlay2/97dc43f5c897149e8e0fe2e7bf3e3291eb6e8e20a37172641f1d785687c8dc89/diff:/var/lib/docker/overlay2/b0e981465c6c56ff5f00e260a8979b5884c14184d64df91732bb3755a19246f6/diff:/var/lib/docker/overlay2/7a06fd482ba00710c502995075b8c628c21b357ed0c92dbda90f18ece3185591/diff",
+                "MergedDir": "/var/lib/docker/overlay2/0602bd2c12ff46995ec50eda3586363e3f86f038ff7d72b3acfa95c438217fa7/merged",
+                "UpperDir": "/var/lib/docker/overlay2/0602bd2c12ff46995ec50eda3586363e3f86f038ff7d72b3acfa95c438217fa7/diff",
+                "WorkDir": "/var/lib/docker/overlay2/0602bd2c12ff46995ec50eda3586363e3f86f038ff7d72b3acfa95c438217fa7/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "9384aa77f932",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "NODE_ENV=production",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.29.4",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=1",
+                "NJS_VERSION=0.9.4",
+                "NJS_RELEASE=1",
+                "ACME_VERSION=0.3.1"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "wget",
+                    "--quiet",
+                    "--tries=1",
+                    "--spider",
+                    "http://localhost/"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 40000000000,
+                "Retries": 3
+            },
+            "Image": "cv-web",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "b3a8effd01a10d7a95edbddf406a9afc8c34a4547574263754e5786381c2a8cb",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:b00c900da5dd8bf376cf056edcfa7e50375a19d63553b8022bfdebf48812ff01",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "cv",
+                "com.docker.compose.project.config_files": "/Users/animalite/dev/CV/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/animalite/dev/CV",
+                "com.docker.compose.replace": "dev-cv",
+                "com.docker.compose.service": "web",
+                "com.docker.compose.version": "5.0.1",
+                "com.example.department": "Frontend",
+                "com.example.description": "CV React Application",
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT",
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "9a84c52bc1fb08575e22aa9a26c188f704a45850d5370865c401b59727e67414",
+            "SandboxKey": "/var/run/docker/netns/9a84c52bc1fb",
+            "Ports": {
+                "80/tcp": null
+            },
+            "Networks": {
+                "proxy": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "dev-cv",
+                        "web"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "f371321b93825af291dc84071dcf91bc74ec038f592270844f45bebe3609c270",
+                    "EndpointID": "7ecd110909bd65d9cbb5286cf219e7422e5d6f4c796ea058c9dbc5d7407b9b59",
+                    "Gateway": "172.23.0.1",
+                    "IPAddress": "172.23.0.3",
+                    "MacAddress": "3a:0a:76:cc:6a:5e",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "dev-cv",
+                        "web",
+                        "9384aa77f932"
+                    ]
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,4 @@
+.DS_Store
+DEPLOYMENT_README.md
+deploy-quick.sh
+monitor.sh
