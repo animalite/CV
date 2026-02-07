@@ -1,13 +1,13 @@
 **Joaquin Pozo Reyes – Portfolio**
 
 **Overview**
-A modern, high-performance portfolio highlighting my work as a Full-Stack Developer. Built with contemporary web technologies, it emphasizes speed, responsiveness, and accessibility.
+A modern, minimalist portfolio highlighting my work as a Full-Stack Developer.
 
 **Stack**
 - **Frontend:** React, Vite, TypeScript
 - **Styling:** Tailwind CSS
 - **Deployment:** Docker, Nginx
-- **Performance:** Optimized asset loading, font subsetting
+- **Performance:** Optimized asset loading
 - **CI/CD:** Docker-based build pipeline
 
 **Features**
@@ -16,26 +16,7 @@ A modern, high-performance portfolio highlighting my work as a Full-Stack Develo
 - WCAG 2.1 AA compliant accessibility
 - Security best practices implemented
 - SEO-friendly structure
-- Clean, minimalist interface
-
-**Set up**
-
-**Local Development**
-1. Clone the repository
-```bash
-git clone https://github.com/etilamine/cv.git
-cd cv
-```
-
-2. Install dependencies
-```bash
-pnpm install
-```
-
-3. Start the development server
-```bash
-pnpm dev
-```
+- Neobrutalist interface
 
 **Docker Deployment**
 ```bash
@@ -55,9 +36,9 @@ docker-compose up --build -d
 - Reduced attack surface
 
 **Performance Scores**
-- **Performance:** 95+/100
-- **Accessibility:** 95+/100
-- **SEO:** 90+/100
+- **Performance:** 99/100
+- **Accessibility:** 93/100
+- **SEO:** 91/100
 
 **License**
 MIT License
